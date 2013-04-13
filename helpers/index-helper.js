@@ -16,6 +16,7 @@ var tag_helpers = {
 	recent_posts: function() {
     var output = [];
      var mocks = fs.readdirSync("templates/projects");
+     mocks = _.reject(mocks, function(item){return item.charAt(0) == '.'})
     // console.log(mocks);
 		return _.map(mocks, function(item){return {"item":item}});
 	}

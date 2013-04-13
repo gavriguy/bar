@@ -1,0 +1,25 @@
+<h1>Timeline</h1>  
+<p>
+  <strong>Next Event Countdown: </strong>{{countdownToNextEvent}} | 
+  <strong>Episode Countdown: </strong>{{totalCountdoun()}} | 
+  <strong>Pending events: </strong><span ng-repeat="item in pendingEventsStack">{{events[item].name}} </span>
+</p>
+<div class="progress timeline">
+  <div class="bar bar-success" style="width: {{seekerPos}}%;"></div>
+</div>
+
+<timeline ng-model="events"></timeline>
+
+<div class="btn-group">
+  <button class="btn" ng-click="playPause()">{{buttonLable()}}</button>
+  <button class="btn" ng-click="reset()">Reset</button>
+</div>
+
+
+ 
+
+<div class="alert active-event {{events[activeEvent -1].class}}" ng-show="(activeEvent != -1)">
+  <button ng-click="closeEvent()" type="button" class="close" data-dismiss="alert">&times;</button>
+  <p><strong>{{events[activeEvent -1].name}}</strong></p>
+  <p><a ng-show="hasPendingEvent"  ng-click="goToNewsetEvent()" class="btn btn-warning">New</a></p>
+</div>
