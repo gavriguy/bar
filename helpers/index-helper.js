@@ -15,9 +15,9 @@ var tag_helpers = {
 
 	recent_posts: function() {
     var output = [];
-    var mocks = fs.readdirSync("./mocks");
-    console.log(mocks);
-		return _.map(mocks, function(item){return {"item":JSON.parse(fs.readFileSync("./mocks/"+item+"/manifest.json")).name}});
+     var mocks = fs.readdirSync("templates/projects");
+    // console.log(mocks);
+		return _.map(mocks, function(item){return {"item":item}});
 	}
 
 };
