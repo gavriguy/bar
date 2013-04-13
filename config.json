@@ -1,0 +1,24 @@
+{
+	"template_dir": "templates", 
+	"content_dir": "contents",
+	"output_dir": "output",
+
+	"server": { 
+		"port": 9009
+	},
+
+	"plugins": {
+		"content_handler": "./helpers/mocks-handler.js",
+		"helpers": {
+			"index_helper": "./helpers/index-helper.js"
+		}
+	},
+
+	"bundles": {
+		"/css/all.css": [
+			"/css/normalize.css",	
+			"/css/main.css",
+			"/css/site.less"
+		]	
+	}
+}

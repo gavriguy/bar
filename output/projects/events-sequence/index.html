@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://admin.qa.applicaster.com/accounts/32/broadcasters/1/inappmail -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta class="cms-section" content="vod">
+    <title> iReshet - 2.0</title>
+
+    <!-- General Style Sheets -->
+    <link href="ireshet/reset-1eae1235aaecc7fc25bc0477dedb0e19.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="ireshet/jquery-ui-97bff8bec013751c5f707f489a99e68e.css" media="screen" rel="stylesheet" type="text/css">
+  <script type="text/javascript" async="" src="./ireshet/ga.js"></script><script src="./ireshet/application-766ef00b4d7845ce4a03f1ee5d3e622a.js" type="text/javascript"></script>
+
+    <link href="ireshet/cms_master-454745320d9c35253a6e442e08f4b269.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="ireshet/vod-c6407d2621a61e57dc712859a7ff672d.css" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- Tree Stuff -->
+    <link href="ireshet/jquery.treeview-b80f2a0d32ab2feaf3797640bcf51449.css" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- Item Picker -->
+    <link href="ireshet/facebox-a5258839e2ebb2120007a27dabf04145.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="ireshet/gallery-bbc57baefb3ec1c01e4d1168016c69fb.css" media="screen" rel="stylesheet" type="text/css">
+
+  <!-- jQuery UI Multiselect -->
+  <link href="ireshet/common-3cbff414aba066e21e2952d1d2374f2b.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="ireshet/ui.multiselect-e4a36b1e0aa1e635c34c0cceafadeff5.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="ireshet/ui_multiselect-d98e289d9dbfd6664e480f9a4445d438.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="ireshet/ui_multiselect_filter-042fced2ffe071b1e517894a6dfbcc73.css" media="screen" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="http://admin.qa.applicaster.com/javascripts/tiny_mce/themes/advanced/skins/default/ui.css"><link rel="stylesheet" href="http://admin.qa.applicaster.com/javascripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/window.css">
+<link rel="stylesheet" href="styles/4fcf1fb7.main.css"/>
+</head>
+ <body ng-app="cmsApp" ng-csp>
+
+     <!-- Add your site or application content here -->
+        <!--  -->
+<!-- 
+        <script type="text/javascript" src="components/jquery/jquery.min.js"></script>
+         -->
+        <script type="text/javascript" src="components/underscore/underscore-min.js"></script>
+        <script src="scripts/vendor/d878171e.angular.js"></script>
+        <script type="text/javascript" src="scripts/vendor/a8ae561b.angular-underscore.js"></script>
+        <script type="text/javascript" src="scripts/vendor/1f4f3396.jquery.joyride-2.0.3.js"></script>
+
+        <script src="scripts/0831aa14.scripts.js"></script>
+
+
+    <div class="container">
+        <div class="top_bar"><span class="applicaster_logo"></span><ul class="top_header_tab"><li class="live_link" id="live"><a href="http://admin.qa.applicaster.com/accounts/32/channels/1/programs">LIVE</a></li><li class="vod_link active" id="vod"><a href="http://admin.qa.applicaster.com/accounts/32/broadcasters/1/categories" class="active">VOD</a></li><li class="ui_link" id="ui_center"><a href="http://admin.qa.applicaster.com/ui/accounts/32/covers">UI Center</a></li><li class="activities_link" id="activities"><a href="http://admin.qa.applicaster.com/accounts/32/questionnaires">Activities</a></li><li class="admin_link" id="admin"><a href="http://admin.qa.applicaster.com/accounts/32/apps">Admin</a></li><li class="management_link" id="management"><a href="http://admin.qa.applicaster.com/management/accounts">Management</a></li></ul><select class="form-select" id="account_select" name="account[id]" onchange="document.location = this.value"><option value="/accounts/2/broadcasters/69/categories">Account 2 |  Sport5</option>
+<option value="/accounts/32/broadcasters/1/categories" selected="selected">Account 32 |  iReshet</option>
+<option value="/accounts/38/broadcasters/8/categories">Account 38 |  BabyFirstTV</option>
+<option value="/accounts/39/broadcasters/24/categories">Account 39 |  Keshet</option>
+<option value="/accounts/40/broadcasters/22/categories">Account 40 |  Hot</option>
+<option value="/accounts/59/broadcasters/44/categories">Account 59 |  BabyTV</option>
+<option value="/accounts/61/broadcasters/58/categories">Account 61 |  PokerStarsTV</option>
+<option value="/accounts/68/broadcasters/65/categories">Account 68 |  Noga</option>
+<option value="/accounts/69/broadcasters/67/categories">Account 69 |  Channel 10</option>
+<option value="/accounts/74/broadcasters/73/categories">Account 74 |  ChelloMultiCanal</option>
+<option value="/accounts/77/broadcasters/77/categories">Account 77 |  Aviatrix</option>
+<option value="/accounts/80/broadcasters/79/categories">Account 80 |  Dubbing House</option>
+<option value="/accounts/82/broadcasters/81/categories">Account 82 |  Live Asia</option>
+<option value="/accounts/83/broadcasters/82/categories">Account 83 |  Televisa</option>
+<option value="/accounts/84/broadcasters/83/categories">Account 84 |  Televisa Consumer Products</option>
+<option value="/accounts/85/broadcasters/89/categories">Account 85 |  Pramer</option>
+<option value="/accounts/86/broadcasters/91/categories">Account 86 |  El Universal</option></select><select class="form-select" id="broadcaster_select" name="broadcaster[id]" onchange="document.location = &#39;/accounts/&#39; + 32 + &#39;/broadcasters/&#39; + this.value + &#39;/categories&#39;"><option value="1" selected="selected">Library 1 |  2.0</option>
+<option value="27">Library 27 |  ××× ××¢× 101</option>
+<option value="38">Library 38 |  ×¨××§××× 2011</option></select>broadcasters<span class="username"><a id="info1" onClick="location.reload();" href="#">RELOAD</a></span></div>
+        <div class="nav_bar">
+            <div class="secondary-navigation"><ul><li class="vod" id="vod_items"><a href="http://admin.qa.applicaster.com/accounts/32/broadcasters/1/categories">Widgets</a></li><li class="list" id="item_lists"><a href="http://admin.qa.applicaster.com/accounts/32/broadcasters/1/item_lists">Events</a></li><li class="social active" id="social"><a href="./ireshet/iReshet - 2.0.html" class="active">Events Sequence</a></li></ul></div>
+            
+    
+    <div id="logoinheader">
+        <img alt="Customer_logos_logo257" src="./ireshet/customer_logos_logo257.png">
+    </div>
+    
+
+        </div>
+        <div class="content">
+          
+
+
+                
+   
+
+
+<div class="third-navigation"><ul>
+    <li class=" simple-navigation-active-leaf"><a>List</a></li>
+   
+    <!-- <li class="active simple-navigation-active-leaf" id="inappmail"><a href="./ireshet/iReshet - 2.0.html" class="active">Add/Edit</a></li> -->
+</ul></div>
+</ul>
+
+<div ng-view></div>
+
+</div>
+
+
+
+
+
+<form action="http://admin.qa.applicaster.com/accounts/32" enctype="multipart/form-data" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="gReKNV6bjry6Aqal1D/YHUVj94BJJ5YfQ3yuj5kXAE8="></div>
+    <div style="width:0px;height:0px;visibility:hidden;">
+    <span class="item_picker_tag" rel="facebox" href="/accounts/32/inappmail_images" id="broadcaster_1"></span><script>(function () {
+            var myPicker = $("#broadcaster_1");
+            $().ready(function () {
+              myPicker.itempicker().bind(
+              {
+                  "selected.itempicker" :
+                    function(event, item) {
+                      try {
+                      window.inAppMailEditor.focus();
+                      window.inAppMailEditor.selection.setContent("<img src='" + $(item).attr('data-record-url') + "' alt='' />");
+                      } catch(e) {
+                        console.log("In-App Mail Error: " +e);
+                      }
+                    }
+              });
+            });
+            })();</script>
+    </div>
+</form>
+
+        </div>
+        <div class="footer">
+    <a class="contact_support" href="mailto:support@applicaster.com">Contact Support Now</a>
+
+    <!--   POPUP FOR NEW USERS   -->
+
+    <!--div class="welcme-popup">
+      <a class="btn close">X</a>
+      <h2>Welcome to Applicaster's CMS!</h2>
+      <p>You may have noticed that we have changed the look &amp; feel of the entire system, and added a few new features as well.<br />
+    Feel free to contact our support team for any questions or suggestions you may have, we would love to hear from you!</p>
+    </div-->
+
+    
+    <div class="prize">
+      <a class="btn open-prize">Use the CMS to Win a Prize</a>
+      <div class="prize-tooltip"></div>
+      <div class="prize-popup">
+        <div class="prize-message">
+        <a class="btn close-prize"></a>
+        <p>Rewarding your loyalty and patience, every quarter, Applicaster CMS users will have a chance to win well deserved vacations.
+          Our MVU ("Most Valuable User") for this quarter will win a magical weekend retreat, and will be determined by the overall frequency of usage,
+          and specifically the most creative usage of the new Takeover / Sync button features (Send us photos to
+          <a href="mailto:mvu@applicaster.com" title="send us an e-mail">mvu@applicaster.com</a>) to qualify.</p>
+        <p>The prize winner will be announced at the next Applicaster newsletter. There will only be one winner across all CMS users.
+          <br> Good luck and happy CMS'ing ! :)</p>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="footer_text">
+        Â© 2011, All rights reserved to applicaster
+    </div>
+</div>
+
+<script>
+window.jQuery(document).ready(function( $ ){
+
+   // $("#chooseID").joyride({
+   //  });
+  // POPUP FOR NEW USERS
+
+  // $(".welcme-popup .close").click(function(){
+  //   $(".welcme-popup").hide();
+  // });
+  if (!$.cookie("prize-tooltip")){
+    $(".prize-tooltip").delay(2000).fadeIn('fast', function(){
+      $.cookie("prize-tooltip", 1);
+    }).delay(5000).fadeOut('fast');
+  };
+
+  $(".btn.open-prize, .prize-tooltip").click(function(){
+    $(".prize-popup").fadeIn('slow');
+    $(".prize-tooltip").hide();
+  });
+
+  $(".btn.close-prize, .prize-popup").click(function(){
+    $(".prize-popup").fadeOut('slow');
+  });
+
+});
+
+</script>
+
+
+    </div>
+
+
+
+<div id="qtip-rcontainer"></div>
+
+<ol id="chooseID">
+  <li>
+     <h4>Events Sequence</h4>
+    <p>Version 1.0</p>
+  </li>
+  <li data-class="time-mask" data-options="tipLocation:top">
+    <h4>Time mask</h4>
+    <p>Use jquery mask plugin</p> 
+  </li>
+  <li data-class="time-error" data-options="tipLocation:top">
+    <h4>Out of timeframe</h4>
+    <p>In case an item is out of the time frame of the episode mark it with red. When hoevr use a red tooltip</p>
+    <p><img width="260px" src="images/time-err-tooltip.png"/></p>
+  </li>
+</ol>
+
+
+</body></html>

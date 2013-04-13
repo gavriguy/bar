@@ -1,0 +1,110 @@
+<div class="primary-content">
+	<div ng-show="onEditMode()" class="disabled"></div>
+	<div class="inner">
+		<h1>New Events Squence</h1>
+		<div class="form-field">
+			<label for="sequence_name">Name</label>
+			<input id="sequence_name" class="form-text" type="text" size="30" />
+		</div>
+		<div class="form-field">
+			<label for="sequence_duration">Duration<span>Format hh:mm:ss</span></label>
+			<input id="sequence_duration" class="form-text time-mask" type="text" size="30" ng-model="episodeDuration"/>
+		</div>
+		<div class="btn-add-new" style="margin-bottom:15px">
+    		<a ng-click="newEvent()"><span>Add new event</span></a>
+  		</div>
+		<table class="list table-sequence selectable-row">
+	  		<thead>
+				<tr>
+					<th class="name">Event Name</th>
+					<th class="type">Type</th>
+					<th class="start">Start</th>
+					<th class="end">End</th>
+					<th class="edit-controls"></th>
+				</tr>
+			</thead>
+	  		<tbody>
+				<tr ng-repeat="event in events | orderBy: 'start'" ng-click="editEvent(event)" class="animated {{isSelected(event.id)}} {{isNew(event.id)}} {{isTimeError(event.start)}}" aria-describedby="ui-tooltip-5">
+
+
+					<td class="name">{{event.name}}</td>
+					<td class="type">{{event.type}}</td>
+					<td class="start">{{event.start}}</td>
+					<td class="end">{{event.end}}</td>
+					<td class="edit-controls">
+			          <ul>
+			            <li><a remove class="btn btn-delete" ng-click="deleteEvent(event.id)"></a></li>
+			            <li><a class="btn btn-edit"></a></li>
+			          </ul>
+			        </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="sidebar animated fadeInDown" ng-class="{eventEdit: (activeEvent != 'new'), editMode: (myForm.$dirty)}" ng-show="showForm">
+	<form class="inner" name="myForm" ng-submit="saveEvent()">
+		<input class="btn-submit btn btn-save" type="submit" id="submit" value="Save" ng-disabled="!myForm.$dirty" />
+		<input class="btn-submit btn" type="button"  value="Cancel" ng-show="(myForm.$dirty)" ng-click="cancel()"/>
+
+		<h2>{{eventTitle()}} <span>{{name}}</span></h2>
+		<div class="form-field">
+			<label for="name">Name</label>
+			<input type="text" class="form-text" ng-model="name"/>
+		</div>
+
+		<div class="form-field">
+			<label for="sequence_duration">Type</label>
+			<select class="form-select" ng-model="type">
+				<option value="">select</option>
+				<option value="poll">Questionnaire</option>
+				<option value="link">Link</option>
+			<!-- 	<option value="vote">Vote</option>
+				
+				<option value="image">Image</option>
+				<option value="video">Video</option> -->
+			</select>
+		</div>
+		<div class="form-field animated fadeInDown" ng-show="(type == 'poll')">
+			<label for="">Questionnaire</label>
+			<select class="form-select" ng-model="questionnaire">
+				<option value="">Select a questionnaire</option>
+				<option value="qeu">Questionnaire 1</option>
+			</select>
+		</div>
+
+		<div class="animated fadeInDown questionnaire-example" ng-show="(questionnaire == 'qeu') && (type == 'poll')">
+
+		</div>
+
+		<div class="form-field animated fadeInDown" ng-show="(type == 'link')">
+			<label>Link URL</label>
+			<input type="text" class="form-text" ng-model="url" />
+		</div>
+
+		<!-- <div>Widget settings</div> -->
+
+
+		<div class="form-field">
+			<label for="start">Start</label>
+			<input type="text" class="form-text" ng-model="start" />
+		</div>
+
+		<div class="form-field">
+			<label for="end">End</label>
+			<input type="text" class="form-text" ng-model="end"/>
+		</div>
+
+		<!-- <div class="form-field">
+			<label for="target">Target</label>
+			<select id="target" class="form-select">
+				<option value="take_over">Take Over</option>
+				<option value="overlay">Overlay</option>
+			</select>
+		</div> -->
+
+		 <!-- <input type="submit" id="submit" value="Submit" ng-disabled="!myForm.$dirty" /> -->
+		 
+	</form>
+</div>

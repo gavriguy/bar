@@ -1,0 +1,143 @@
+/* line 2, ../../app/styles/css-changes.scss */
+.primary-content,
+.sidebar {
+  width: 50%;
+  position: fixed;
+  top: 160px;
+  bottom: 35px;
+  overflow-y: auto;
+}
+
+/* line 4, ../../app/styles/css-changes.scss */
+.primary-content {
+  left: 0;
+}
+/* line 5, ../../app/styles/css-changes.scss */
+.primary-content .disabled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 9, ../../app/styles/css-changes.scss */
+.sidebar {
+  right: 0;
+  background: #DDD;
+  box-shadow: inset 5px 0 5px rgba(0, 0, 0, 0.2);
+  transition: width 1s;
+  -moz-transition: width 1s;
+  /* Firefox 4 */
+  -webkit-transition: width 1s;
+  /* Safari and Chrome */
+  -o-transition: width 1s;
+  /* Opera */
+}
+/* line 18, ../../app/styles/css-changes.scss */
+.sidebar.editMode {
+  background: #d8e2ef;
+  width: 55%;
+}
+
+/* line 28, ../../app/styles/css-changes.scss */
+.primary-content .inner,
+.sidebar .inner {
+  padding: 30px;
+}
+
+/* line 31, ../../app/styles/css-changes.scss */
+.edit-controls li {
+  float: right;
+}
+
+/* line 32, ../../app/styles/css-changes.scss */
+.edit-controls .btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("/images/icons-edit-controls.png") no-repeat;
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+}
+/* line 40, ../../app/styles/css-changes.scss */
+.edit-controls .btn.btn-delete {
+  background-position: -120px 0;
+}
+/* line 41, ../../app/styles/css-changes.scss */
+.edit-controls .btn.btn-edit {
+  background-position: -40px 0px;
+}
+
+/* line 43, ../../app/styles/css-changes.scss */
+.list tr:hover td {
+  background-color: #380052;
+  color: white;
+  cursor: pointer;
+}
+/* line 47, ../../app/styles/css-changes.scss */
+.list tr:hover td .btn {
+  visibility: visible;
+}
+
+/* line 49, ../../app/styles/css-changes.scss */
+.cancel {
+  display: block;
+  cursor: pointer;
+  float: left;
+  color: #532283;
+}
+
+/* line 55, ../../app/styles/css-changes.scss */
+h2 span {
+  font-style: italic;
+}
+
+/* line 60, ../../app/styles/css-changes.scss */
+input[disabled].btn {
+  background: #bbb;
+  color: #ddd;
+}
+/* line 63, ../../app/styles/css-changes.scss */
+input[disabled].btn:hover {
+  background: #bbb;
+}
+
+/* line 67, ../../app/styles/css-changes.scss */
+form.inner .btn {
+  margin: 10px 5px 10px 0;
+}
+
+/* line 75, ../../app/styles/css-changes.scss */
+.questionnaire-example {
+  background: url("../images/q-ev.png");
+  width: 515px;
+  height: 144px;
+}
+
+/* line 80, ../../app/styles/css-changes.scss */
+.time-error {
+  color: red;
+}
+/* line 82, ../../app/styles/css-changes.scss */
+.time-error:hover {
+  background: #bbb;
+}
+
+/* line 91, ../../app/styles/css-changes.scss */
+.joyride-tip-guide .joyride-next-tip {
+  background: #c73432;
+  border: none;
+}
+/* line 94, ../../app/styles/css-changes.scss */
+.joyride-tip-guide .joyride-next-tip:hover {
+  border: solid 1px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* line 101, ../../app/styles/css-changes.scss */
+#chooseID {
+  display: none;
+}

@@ -1,0 +1,32 @@
+
+@import "compass";
+.timeline {
+  margin-bottom: 0;
+}
+.ticks {
+  background: none;
+  -webkit-box-shadow: none;
+  border: none;
+  .bar {
+
+  }
+  &.progress .bar-warning{
+    background: #fff;
+    -webkit-box-shadow: none;
+  }
+  &.progress .bar-danger{
+    background: #000;
+  }
+}
+
+
+.active-event {
+  margin: 10px 0;
+  height: 200px;
+}
+
+
+// Remove Transtion of progress bar
+.progress .bar {
+  @include transition(width 0);
+}

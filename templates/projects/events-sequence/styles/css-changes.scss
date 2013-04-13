@@ -1,0 +1,103 @@
+.primary-content,
+.sidebar                { width: 50%; position: fixed; top: 160px; bottom: 35px; overflow-y: auto; }
+
+.primary-content        {  left: 0;
+  .disabled   { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 10; background: rgba(0, 0, 0, 0.5);
+
+  }
+}
+.sidebar                {
+  right: 0; background: #DDD; box-shadow: inset 5px 0 5px rgba(0, 0, 0, 0.2); 
+   transition: width 1s;
+    -moz-transition: width 1s; /* Firefox 4 */
+    -webkit-transition: width 1s; /* Safari and Chrome */
+    -o-transition: width 1s; /* Opera */
+  &.eventEdit {
+    
+  }
+  &.editMode {
+    //left: 40%;
+    background: #d8e2ef;
+    width: 55%;
+   
+  }
+}
+
+
+.primary-content .inner,
+.sidebar .inner         { padding: 30px; }
+
+
+.edit-controls li   { float: right; }
+.edit-controls .btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("/images/icons-edit-controls.png") no-repeat;
+  padding: 0;
+  margin: 0; 
+  visibility: hidden;
+  &.btn-delete { background-position: -120px 0; }
+  &.btn-edit {background-position: -40px 0px}
+}
+.list tr:hover td {
+  background-color: #380052;
+  color: white;
+  cursor: pointer;
+ .btn {visibility: visible;}
+}
+.cancel {
+  display: block;
+  cursor: pointer;
+  float: left;
+  color: #532283;
+}
+h2 span {
+  font-style: italic;
+}
+
+
+input[disabled].btn {
+  background: #bbb;
+  color: #ddd;
+  &:hover {
+    background: #bbb;
+  }
+}
+form.inner .btn {
+  margin: 10px 5px 10px 0;
+}
+
+
+
+// Place-holders
+
+.questionnaire-example {
+  background: url('../images/q-ev.png');
+  width: 515px;
+  height: 144px;
+}
+.time-error {
+  color: red;
+  &:hover {
+    background: #bbb;
+  }
+}
+
+
+.joyride-tip-guide {
+  //background: #ddd;
+  //color: #444;
+  .joyride-next-tip {
+    background: rgb(199,52,50);
+    border:none;
+    &:hover {
+      border: solid 1px rgba(255,255,255, 0.2) !important;
+    }
+  }
+}
+
+
+#chooseID {
+  display: none;
+}
