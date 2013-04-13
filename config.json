@@ -8,7 +8,7 @@
 	},
 
 	"plugins": {
-		"content_handler": "./helpers/mocks-handler.js",
+		"content_handler": "./mock_content_handler.js",
 		"helpers": {
 			"index_helper": "./helpers/index-helper.js"
 		}
