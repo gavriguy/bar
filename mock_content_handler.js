@@ -22,6 +22,7 @@ module.exports = {
 	negotiateContent: function(basepath, file_extension, options, callback) {
 		var self = this;
 		var projectName;
+		var projectPath;
 
 		// if index is requested,
 		// serve a blank object
@@ -34,7 +35,8 @@ module.exports = {
 		}
 		else {
 			projectName = JSON.parse(fs.readFileSync("templates/projects/"+basepath+"/manifest.json")).name;
-			return callback(null, { "projectName":projectName }, {}, new Date().getTime());
+			projectPath = "projects"+basepath+"/";
+			return callback(null, { "projectName":projectName, "projectPath":projectPath }, {}, new Date().getTime());
 		}
 		// if (basepath === "/foo") {
 		// 	return callback("[Error: Content for " + basepath + " not found]", null, null, {});
